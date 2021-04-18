@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+  <main role="main" class="inner cover">
+		<h1 class="cover-heading">Multiple Sequence Alignment.</h1>
+		<p>Please enter DNA sequences one by one, each name and sequence on a new line.</p>
+		<form action="/result" method="post">
+			<textarea class="sequences" name="inputSequence" id="inputSequence" rows="9" cols="35" required placeholder=">firstOne
+GAAGTTA
+>secondOne
+GAC-TTA
+>third
+GAACTGA
+>fourth
+GTACTGA"></textarea><br />
+		<input type="file" id="fasta" name="fasta" accept=".fasta">
+		<label for="fileInput">Tick if you want to use FASTA input</label>
+		<input type="checkbox" id="fileInput" name="fileInput">
+		<br />
+		<textarea id="fileInside" name="fileInside" hidden></textarea>
+		<button class="btn-lg btn-secondary btnStyle" type="submit">Align</button>
+		</form>
+	</main>
+	<script type="text/javascript" src="scripts/input.js">
+	</script>
+<%- include('footer'); -%>
